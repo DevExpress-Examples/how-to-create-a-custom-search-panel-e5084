@@ -91,7 +91,7 @@
             this.mapControl1.Layers.Add(this.informationLayer3);
             this.mapControl1.Location = new System.Drawing.Point(4, 28);
             this.mapControl1.Name = "mapControl1";
-            this.mapControl1.ShowSearchPanel = false;
+            this.mapControl1.SearchPanelOptions.Visible = false;
             this.mapControl1.Size = new System.Drawing.Size(616, 409);
             this.mapControl1.TabIndex = 0;
             // 

@@ -10,6 +10,13 @@ namespace MapControl_SearchPanel {
         public Form1() {
             InitializeComponent();
             SearchLayer.DataRequestCompleted += SearchLayer_DataRequestCompleted;
+            // 
+            mapControl1.Layers.Add(new ImageLayer() {
+                DataProvider = new BingMapDataProvider() {
+                    BingKey = "YOUR BING KEY",
+                    Kind = BingMapKind.Area
+                }
+            });
         }
 
         void SearchLayer_DataRequestCompleted(object sender, RequestCompletedEventArgs e) {
