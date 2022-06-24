@@ -1,5 +1,7 @@
-﻿Namespace MapControl_SearchPanel
-    Partial Public Class Form1
+Namespace MapControl_SearchPanel
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -35,14 +37,14 @@
             Me.layoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
             Me.lciKeyword = New DevExpress.XtraLayout.LayoutControlItem()
             Me.layoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.layoutControl1.SuspendLayout()
-            DirectCast(Me.teKeyword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.mapControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciKeyword, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.teKeyword.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.mapControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciKeyword), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlItem2), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' imageTilesLayer3
@@ -75,6 +77,7 @@
             Me.bSearch.TabIndex = 3
             Me.bSearch.Text = "Search"
             Me.bSearch.UseVisualStyleBackColor = True
+            AddHandler Me.bSearch.Click, New System.EventHandler(AddressOf Me.bSearch_Click)
             ' 
             ' teKeyword
             ' 
@@ -90,15 +93,15 @@
             Me.mapControl1.Layers.Add(Me.informationLayer3)
             Me.mapControl1.Location = New System.Drawing.Point(4, 28)
             Me.mapControl1.Name = "mapControl1"
-            Me.mapControl1.ShowSearchPanel = False
+            Me.mapControl1.SearchPanelOptions.Visible = False
             Me.mapControl1.Size = New System.Drawing.Size(616, 409)
             Me.mapControl1.TabIndex = 0
             ' 
             ' layoutControlGroup1
             ' 
-            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True
+            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
             Me.layoutControlGroup1.GroupBordersVisible = False
-            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() { Me.layoutControlItem1, Me.lciKeyword, Me.layoutControlItem2})
+            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutControlItem1, Me.lciKeyword, Me.layoutControlItem2})
             Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
             Me.layoutControlGroup1.Name = "layoutControlGroup1"
             Me.layoutControlGroup1.Padding = New DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2)
@@ -140,33 +143,40 @@
             Me.Controls.Add(Me.layoutControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.layoutControl1.ResumeLayout(False)
-            DirectCast(Me.teKeyword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.mapControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciKeyword, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.teKeyword.Properties), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.mapControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciKeyword), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlItem2), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private layoutControl1 As DevExpress.XtraLayout.LayoutControl
-        Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
-        Private WithEvents bSearch As System.Windows.Forms.Button
-        Private teKeyword As DevExpress.XtraEditors.TextEdit
-        Private mapControl1 As DevExpress.XtraMap.MapControl
-        Private layoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
-        Private lciKeyword As DevExpress.XtraLayout.LayoutControlItem
-        Private layoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
-        Private imageTilesLayer3 As DevExpress.XtraMap.ImageLayer
-        Private bingMapDataProvider3 As DevExpress.XtraMap.BingMapDataProvider
-        Private informationLayer3 As DevExpress.XtraMap.InformationLayer
-        Private bingSearchDataProvider3 As DevExpress.XtraMap.BingSearchDataProvider
 
+        Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+
+        Private bSearch As System.Windows.Forms.Button
+
+        Private teKeyword As DevExpress.XtraEditors.TextEdit
+
+        Private mapControl1 As DevExpress.XtraMap.MapControl
+
+        Private layoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
+
+        Private lciKeyword As DevExpress.XtraLayout.LayoutControlItem
+
+        Private layoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
+
+        Private imageTilesLayer3 As DevExpress.XtraMap.ImageLayer
+
+        Private bingMapDataProvider3 As DevExpress.XtraMap.BingMapDataProvider
+
+        Private informationLayer3 As DevExpress.XtraMap.InformationLayer
+
+        Private bingSearchDataProvider3 As DevExpress.XtraMap.BingSearchDataProvider
     End Class
 End Namespace
-
