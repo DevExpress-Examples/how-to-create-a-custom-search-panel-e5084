@@ -28,7 +28,7 @@ The built-in search panel is not used in this example, so the [MapControl.Search
 
 A search location parameter is passed to the [BingSearchDataProvider.Search](https://docs.devexpress.com/WindowsForms/DevExpress.XtraMap.BingSearchDataProvider.Search.overloads) method, and you can see a desired location on the map. You can select from the overloads for the `Search()` method depending on your search criteria.
 
-## Files to Look At
+## Files to Review
 
 * [Form1.cs](./CS/MapControl_SearchPanel/Form1.cs) (VB: [Form1.vb](./VB/MapControl_SearchPanel/Form1.vb))
 
